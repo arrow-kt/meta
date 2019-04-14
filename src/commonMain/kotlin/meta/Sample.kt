@@ -1,11 +1,11 @@
-package sample
+package meta
 
 expect class Sample() {
-  fun checkMe(): Int
+    fun checkMe(): Int
 }
 
 expect object Platform {
-  val name: String
+    val name: String
 }
 
 fun hello(): String = "Hello from ${Platform.name}"

@@ -1,12 +1,15 @@
-# Log file
+### Log file
 *.log
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+### virtual machine crash logs
 hs_err_pid*
 
-Intellij
+### Intellij
 .idea
 
-Gradle
+### Gradle
 build/
 .gradle
+
+### Psi
+lib/

@@ -9,5 +9,6 @@ pluginManagement {
 }
 rootProject.name = 'meta'
 
+include "annotations"
 
 enableFeaturePreview('GRADLE_METADATA')
