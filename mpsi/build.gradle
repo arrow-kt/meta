@@ -1,4 +1,5 @@
 apply plugin: "kotlin-platform-common"
+apply plugin: "org.jetbrains.intellij"
 
 repositories {
     mavenCentral()
@@ -6,5 +7,4 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-common:${V.kotlin}"
-    implementation deps.intellijCore
 }

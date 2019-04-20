@@ -4,11 +4,16 @@ pluginManagement {
       if (requested.id.id == "kotlin-multiplatform") {
         useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
       }
+      if (requested.id.id == "kotlinx-serialization") {
+        useModule("org.jetbrains.kotlin:kotlin-serialization:${requested.version}")
+      }
     }
   }
 }
+
 rootProject.name = 'meta'
 
-include "annotations"
+include "mpsi"
+include "mreflx"
 
 enableFeaturePreview('GRADLE_METADATA')
