@@ -1,10 +1,12 @@
-apply plugin: "kotlin-platform-common"
-apply plugin: "org.jetbrains.intellij"
+apply plugin: "kotlin"
 
 repositories {
     mavenCentral()
+    maven { url "https://www.jetbrains.com/intellij-repository/releases" }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-common:${V.kotlin}"
+    implementation "com.jetbrains.intellij.platform:analysis-impl:${V.intellij}"
+    implementation "com.jetbrains.intellij.platform:analysis:${V.intellij}"
 }
