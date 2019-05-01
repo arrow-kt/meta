@@ -1,0 +1,14 @@
+plugins {
+    id 'kotlinx-serialization' version '1.3.30'
+}
+
+apply plugin: "kotlin-platform-common"
+
+repositories {
+    mavenCentral()
+    maven { url "https://kotlin.bintray.com/kotlinx" }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-common:${V.kotlin}"
+}
