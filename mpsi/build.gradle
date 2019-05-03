@@ -3,6 +3,7 @@ apply plugin: "kotlin-platform-jvm"
 repositories {
     mavenCentral()
     maven { url "https://www.jetbrains.com/intellij-repository/releases" }
+    maven { url "https://dl.bintray.com/jetbrains/intellij-third-party-dependencies" }
 }
 
 dependencies {
