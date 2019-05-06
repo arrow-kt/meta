@@ -1,4 +1,4 @@
-package mkapt.higherkinds
+package mreflx.higherkinds
 
 abstract class HigherKindProcessor {
 }

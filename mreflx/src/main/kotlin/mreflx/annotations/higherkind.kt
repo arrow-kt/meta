@@ -1,4 +1,4 @@
-package mkapt.annotations
+package mreflx.annotations
 
 import kotlin.annotation.AnnotationRetention.RUNTIME
 import kotlin.annotation.AnnotationTarget.CLASS
