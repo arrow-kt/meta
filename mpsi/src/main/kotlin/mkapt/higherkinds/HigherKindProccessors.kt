@@ -1,4 +1,4 @@
-package annotations.processors
+package mkapt.higherkinds
 
 import com.intellij.lang.annotation.Annotator
 
