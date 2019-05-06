@@ -16,6 +16,7 @@ rootProject.name = 'meta'
 include "mpsi"
 include "mreflx"
 include "mkapt"
+include "mkapt-impl"
 include "mpp-test"
 
 enableFeaturePreview('GRADLE_METADATA')

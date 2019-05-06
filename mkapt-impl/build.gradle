@@ -1,0 +1,12 @@
+apply plugin: "kotlin-platform-jvm"
+apply plugin: 'kotlin-kapt'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${V.kotlin}"
+    compile project(":mkapt")
+    kapt project(":mkapt")
+}
