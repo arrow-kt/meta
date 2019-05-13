@@ -5,7 +5,8 @@ buildscript {
       kotlinpoet: "1.1.0",
       intellij: "191.6707.61",
       gAuto: "1.0-rc4",
-      metadata: "1.4.0"
+      metadata: "1.4.0",
+      kindedj: "1.1.0"
   ]
 }
 
