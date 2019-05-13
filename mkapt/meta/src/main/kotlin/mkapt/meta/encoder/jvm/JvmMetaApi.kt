@@ -280,7 +280,7 @@ interface JvmMetaApi : MetaApi, TypeElementEncoder, ProcessorUtils, TypeDecoder 
     }
 
   /**
-   * @see [MetaApi.TODO]
+   * @see [MetaApi.todo]
    */
   override val Code.Companion.TODO: Code
     get() = Code("return TODO()")
