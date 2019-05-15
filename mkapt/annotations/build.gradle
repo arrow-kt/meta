@@ -1,10 +1,9 @@
-apply plugin: "kotlin-platform-jvm"
+apply plugin: "kotlin-platform-common"
 
 repositories {
     jcenter()
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:${V.kotlin}"
-    compile "io.kindedj:kindedj:${V.kindedj}"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-common:${V.kotlin}"
 }

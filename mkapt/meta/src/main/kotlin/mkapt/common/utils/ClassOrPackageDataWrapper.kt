@@ -7,7 +7,7 @@ import me.eugeniomarletti.kotlin.metadata.shadow.metadata.ProtoBuf.Function
 import me.eugeniomarletti.kotlin.metadata.shadow.metadata.deserialization.NameResolver
 
 sealed class ClassOrPackageDataWrapper {
-  abstract val `package`: String
+  abstract val pkg: String
   abstract val nameResolver: NameResolver
   abstract val constructorList: List<Constructor>
   abstract val functionList: List<Function>
@@ -18,7 +18,7 @@ sealed class ClassOrPackageDataWrapper {
   class Package(
     override val nameResolver: NameResolver,
     val packageProto: me.eugeniomarletti.kotlin.metadata.shadow.metadata.ProtoBuf.Package,
-    override val `package`: String
+    override val pkg: String
   ) : ClassOrPackageDataWrapper() {
     override val constructorList: List<Constructor> get() = emptyList()
     override val functionList: List<Function> get() = packageProto.functionList
@@ -30,7 +30,7 @@ sealed class ClassOrPackageDataWrapper {
   class Class(
     override val nameResolver: NameResolver,
     val classProto: me.eugeniomarletti.kotlin.metadata.shadow.metadata.ProtoBuf.Class,
-    override val `package`: String
+    override val pkg: String
   ) : ClassOrPackageDataWrapper() {
     override val constructorList: List<Constructor> get() = classProto.constructorList
     override val functionList: List<Function> get() = classProto.functionList

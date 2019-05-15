@@ -10,8 +10,8 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${V.kotlin}"
-    
-    compile project(":mkapt-annotations")
+
+    expectedBy project(":mkapt-annotations")
     
     compile "me.eugeniomarletti.kotlin.metadata:kotlin-metadata:${V.metadata}"
     compile("com.squareup:kotlinpoet:${V.kotlinpoet}") {

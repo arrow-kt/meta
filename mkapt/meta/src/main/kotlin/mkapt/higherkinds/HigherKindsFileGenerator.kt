@@ -13,7 +13,7 @@ const val KindedJPostFix = "KindedJ"
 const val HKMarkerPreFix = "For"
 
 data class HigherKind(
-  val `package`: Package,
+  val pkg: Package,
   val target: AnnotatedHigherKind
 ) {
   val tparams: List<ProtoBuf.TypeParameter> = target.classOrPackageProto.typeParameters
@@ -37,7 +37,7 @@ class HigherKindsFileGenerator(
 ) {
 
   private val higherKinds: List<HigherKind> =
-    annotatedList.map { HigherKind(it.classOrPackageProto.`package`, it) }
+    annotatedList.map { HigherKind(it.classOrPackageProto.pkg, it) }
 
   /**
    * Main entry point for higher kinds instance generation.
@@ -47,7 +47,7 @@ class HigherKindsFileGenerator(
       val elementsToGenerate =
         listOf(genKindMarker(hk), genKindTypeAliases(hk), genKindedJTypeAliases(hk), genEv(hk))
       val source: String = elementsToGenerate.joinToString(
-        prefix = "${if (hk.`package` != "unnamed package") "package ${hk.`package`}" else ""}\n\n",
+        prefix = "${if (hk.pkg != "unnamed package") "package ${hk.pkg}" else ""}\n\n",
         separator = "\n", postfix = "\n"
       )
       val file = File(

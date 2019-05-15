@@ -103,7 +103,7 @@ interface KotlinMetatadataEncoder {
       enclosingType = TypeName.Classy(
         simpleName = meta.simpleName.asKotlin(),
         fqName = meta.fullName.asKotlin(),
-        pckg = PackageName(meta.`package`.asKotlin()),
+        pckg = PackageName(meta.pkg.asKotlin()),
         nullable = false
       )
     )
