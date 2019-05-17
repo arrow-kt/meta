@@ -1,4 +1,4 @@
-package annotations.processors
+package mreflx.higherkinds
 
 abstract class HigherKindProcessor {
 }

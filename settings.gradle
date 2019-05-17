@@ -11,9 +11,19 @@ pluginManagement {
   }
 }
 
-rootProject.name = 'meta'
+rootProject.name = 'arrow-meta'
 
-include "mpsi"
-include "mreflx"
+include ':mkapt-annotations'
+project(':mkapt-annotations').projectDir = new File("$rootDir/mkapt/annotations")
+
+include ':mkapt-meta'
+project(':mkapt-meta').projectDir = new File("$rootDir/mkapt/meta")
+
+include ':mkapt-impl'
+project(':mkapt-impl').projectDir = new File("$rootDir/mkapt/impl")
+
+include ":mpsi"
+include ":mreflx"
+include ":mpp-test"
 
 enableFeaturePreview('GRADLE_METADATA')
