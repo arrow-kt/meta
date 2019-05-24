@@ -9,8 +9,4 @@ class SampleTests {
     assertTrue(Sample().checkMe() > 0)
   }
 
-  @Test
-  fun testHello() {
-    assertTrue("None" in hello())
-  }
 }
