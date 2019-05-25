@@ -8,7 +8,7 @@ kotlin {
   jvm()
   js()
   linuxX64("linux")
-  macosX64()
+  macosX64("macos")
   sourceSets {
     commonMain {
       dependencies {
@@ -25,8 +25,7 @@ kotlin {
         implementation kotlin('stdlib-js')
       }
     }
-    linuxMain {
-            
-    }
+    linuxMain {}
+    macosMain {}
   }
 }
