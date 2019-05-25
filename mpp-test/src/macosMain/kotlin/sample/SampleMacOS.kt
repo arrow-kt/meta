@@ -8,5 +8,5 @@ actual class Sample {
 }
 
 actual object Platform {
-  actual val name: Option<String> = "Linux".some()
+  actual val name: Option<String> = "MacOS".some()
 }
