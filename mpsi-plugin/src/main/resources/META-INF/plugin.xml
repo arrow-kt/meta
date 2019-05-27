@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>47deg.arrow-meta.plugin</id>
+    <name>Λrrow-meta</name>
+    <version>0.1</version>
+    <vendor email="hello@47deg.com" url="https://next.arrow-kt.io">Λrrow</vendor>
+
+    <description><![CDATA[
+    Λrrow Meta Plugin provides codegen for Kotlin
+    ]]></description>
+
+    <!-- change-notes><![CDATA[]]></change-notes-->
+
+    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="181"/>
+
+    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <application-components>
+    </application-components>
+
+    <project-components>
+    </project-components>
+
+    <actions>
+    </actions>
+
+</idea-plugin>

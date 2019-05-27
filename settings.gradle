@@ -17,3 +17,6 @@ include "mpsi"
 include "mreflx"
 
 enableFeaturePreview('GRADLE_METADATA')
+rootProject.name = 'meta'
+include 'mpsi-plugin'
+
