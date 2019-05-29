@@ -1,3 +1,5 @@
+package arrow.core
+
 import mkapt.annotations.higherkind
 
 /**

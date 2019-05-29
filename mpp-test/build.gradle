@@ -1,10 +1,55 @@
-apply plugin: "kotlin-platform-common"
+apply plugin: "kotlin-multiplatform"
 
 repositories {
     mavenCentral()
-    maven { url "https://kotlin.bintray.com/kotlinx" }
 }
 
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-common:${V.kotlin}"
+kotlin {
+    jvm()
+    js()
+    linuxX64("linux")
+    macosX64("macos")
+    sourceSets {
+        commonMain {
+            dependencies {
+                implementation kotlin('stdlib-common')
+                implementation project(":mkapt-annotations")
+            }
+        }
+        commonTest {
+            dependencies {
+                implementation kotlin('test-common')
+                implementation kotlin('test-annotations-common')
+            }
+        }
+        jvmMain {
+            dependencies {
+                implementation kotlin('stdlib-jdk7')
+            }
+        }
+        jvmTest {
+            dependencies {
+                implementation kotlin('test')
+                implementation kotlin('test-junit')
+            }
+        }
+        jsMain {
+            dependencies {
+                implementation kotlin('stdlib-js')
+            }
+        }
+        jsTest {
+            dependencies {
+                implementation kotlin('test-js')
+            }
+        }
+        linuxMain {
+        }
+        linuxTest {
+        }
+        macosMain {
+        }
+        macosTest {
+        }
+    }
 }

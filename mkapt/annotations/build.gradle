@@ -1,9 +1,31 @@
-apply plugin: "kotlin-platform-common"
+apply plugin: "kotlin-multiplatform"
 
 repositories {
-    jcenter()
+  mavenCentral()
 }
 
-dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-common:${V.kotlin}"
+kotlin {
+  jvm()
+  js()
+  linuxX64("linux")
+  macosX64("macos")
+  sourceSets {
+    commonMain {
+      dependencies {
+        implementation kotlin('stdlib-common')
+      }
+    }
+    jvmMain {
+      dependencies {
+        implementation kotlin('stdlib-jdk7')
+      }
+    }
+    jsMain {
+      dependencies {
+        implementation kotlin('stdlib-js')
+      }
+    }
+    linuxMain {}
+    macosMain {}
+  }
 }
